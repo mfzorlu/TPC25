@@ -18,14 +18,14 @@ for i in range(n):
         t+=1
         st += i
 
-
-neg = 0
-if sc/c < (n-1)/2:
-    for i in range(c):
-        neg += i
-    print(sc-neg)
-
+if c == 0 or t == 0:
+    print(0)
 else:
-    for i in range(t):
-        neg += i
-    print(st-neg)
+    neg = 0
+    if sc/c < (n-1)/2:
+        neg = (c-1)*c/2
+        print(int(sc-neg))
+    
+    else:
+        neg = (t-1)*t/2
+        print(int(st-neg))
