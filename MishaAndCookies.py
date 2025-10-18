@@ -1,9 +1,8 @@
 n = int(input())
+array = input().split()
 
-l = str(input())
-array = l.split()
-for i in range(n):
-    array[i] = int(array[i])
+
+array = list(map(int,array))
 
 c = []
 t = []
@@ -34,4 +33,3 @@ else:
     for i in range(len(t)):
         neg += i
     print(st-neg)
-
