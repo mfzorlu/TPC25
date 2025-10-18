@@ -7,7 +7,7 @@ array = str(input())
 array = array.split()
 
 result = 0
-c = array[0]
+c = int(array[0])
 
 for i in range(1,n):
     if int(array[i]) > c:
