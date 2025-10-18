@@ -17,6 +17,6 @@ for i in c:
 if harun > a/2:
     print("Harun")
 elif sami > a/2:
-    print("sami")
+    print("Sami")
 else:
     print("Cilek")
