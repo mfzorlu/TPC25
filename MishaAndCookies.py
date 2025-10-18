@@ -19,18 +19,19 @@ sc = 0
 for i in c:
     sc += i
 st = 0
-for i in c:
+for i in t:
     st += i
 
 
 
 neg = 0
-if ((sc/n) + n) < n/4:
+if sc/len(c) < (n-1)/2:
     for i in range(len(c)):
         neg += i
     print(sc-neg)
 
-if ((st/n) + n) < n/4:
+else:
     for i in range(len(t)):
         neg += i
     print(st-neg)
+
