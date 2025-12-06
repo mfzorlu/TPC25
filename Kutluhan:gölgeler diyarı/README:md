@@ -1,0 +1,65 @@
+Soru Ne Diyor? (Türkçe ve net)
+
+Kutluhan diye bir karakter var, oyunun son bilinmeyen seviyesindesin. Karşında N tane canavar var.
+Her canavarın 3 özelliği var:
+
+Ai: Canavarın maksimum ve başlangıç canı
+
+Bi: Kutluhan’a vurduğu hasar
+
+Ci: Kutluhan saldırdıysa, sonraki tur aldığı iyileşme miktarı
+
+Kutluhan ve canavarlar sıra sıra oynuyor:
+
+Döngü Şöyle İşliyor
+1. İlk olarak Kutluhan oynuyor.
+
+Bir canavar seçiyor ve ona D hasar veriyor.
+
+Eğer canavarın canı 0 veya altına düşerse → canavar ölüyor ve artık yok.
+
+2. Sonra canavarların turu geliyor.
+
+Her canavar şu kararlardan birini yapıyor:
+
+Durum A: Canavar son tur Kutluhan tarafından saldırıya uğradıysa
+
+→ O zaman o canavar saldırmaz, bunun yerine Ci kadar iyileşir
+(ama canı Ai’yi geçemez)
+
+Durum B: Canavara Kutluhan son turda vurmadıysa
+
+→ Bu canavar gidip Kutluhan’a Bi hasar vurur.
+
+Amaç
+
+Kutluhan canavarların saldırılarından olabildiğince az hasar alarak hepsini öldürsün.
+
+Senin yapman gereken:
+
+Canavarları hangi sırayla öldüreceksin?
+
+Hangisine ne zaman vuracaksın?
+
+Gereksiz iyileşme yemeden nasıl optimize edeceksin?
+
+En az hasarı Kutluhan ne kadar alır → bunu hesapla.
+
+Eğer canavarları öldürmek imkansızsa (mesela bir canavar her tur Ci kadar iyileşiyor ve D’den hızlı iyileşiyorsa → asla ölmüyor)
+→ −1 yaz.
+
+Girdi Formatı (Özet)
+
+t: test sayısı
+
+Her test:
+
+N D
+
+Sonra N satır: Ai Bi Ci
+
+Çıktı
+
+Her test için:
+Kutluhan’ın alacağı minimum toplam hasar
+(imkansızsa −1)
