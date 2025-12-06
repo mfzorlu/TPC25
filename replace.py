@@ -14,7 +14,7 @@ def delete_find(text, find):
     return len(text)
     
 print(delete_find(text, find))
-"""
+
 A, N = map(int, input().split())
 text = input()
 find = input()
@@ -27,4 +27,22 @@ def delete_find(text, find):
         
         text = new_text
 
-print(delete_find(text, find))
+print(delete_find(text, find))"""
+
+A, N = map(int, input().split())
+text = input()
+find = input()
+
+def delete_find(text, find, N):
+    last = []
+
+    for ch in text:
+        last.append(ch)
+
+        if "".join(last[-N:]) == find:
+            del last[-N:]
+
+    return len(last)
+
+print(delete_find(text, find, N))
+
