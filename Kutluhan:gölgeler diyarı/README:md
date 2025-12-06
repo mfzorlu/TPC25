@@ -63,3 +63,31 @@ Sonra N satır: Ai Bi Ci
 Her test için:
 Kutluhan’ın alacağı minimum toplam hasar
 (imkansızsa −1)
+
+
+örnek girdi:
+3
+1 10
+5 1 9
+5 3
+2 3 9
+5 4 10
+3 8 9
+2 5 8
+4 9 9
+5 9
+2 2 7
+2 7 2
+3 1 10
+5 4 4
+2 2 9
+
+örnek çıktı:
+0
+-1
+18
+
+
+
+
+
