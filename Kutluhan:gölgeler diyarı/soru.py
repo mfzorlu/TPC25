@@ -1,3 +1,13 @@
+
+class Canavar:
+    def __init__(N, Ai, Bi, Ci):
+        self.No = N
+        self.Ai = Ai
+        self.Bi = Bi
+        self.Ci = Ci
+
+
+
 t = int(input())
 N, D, Ai, Bi, Ci = []
 for i in range(t):
@@ -11,4 +21,5 @@ for i in range(t):
     Ai.append(xAi)
     Bi.append(xBi)
     Ci.append(xCi)
+
 
