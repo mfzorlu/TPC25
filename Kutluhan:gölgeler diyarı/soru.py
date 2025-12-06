@@ -68,5 +68,4 @@ def solve():
                 
             print(total_damage_taken)
 
-if __name__ == '__main__':
-    solve()
+solve()
