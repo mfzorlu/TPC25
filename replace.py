@@ -1,4 +1,4 @@
-A, N = list(map(int, input().split()))
+"""A, N = list(map(int, input().split()))
 text = input()
 find = input()
 
@@ -13,4 +13,18 @@ def delete_find(text, find):
     
     return len(text)
     
+print(delete_find(text, find))
+"""
+A, N = map(int, input().split())
+text = input()
+find = input()
+
+def delete_find(text, find):
+    while True:
+        new_text = "".join(text.split(find))
+        if new_text == text:
+            return len(new_text)
+        
+        text = new_text
+
 print(delete_find(text, find))
