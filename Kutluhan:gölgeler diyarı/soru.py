@@ -4,44 +4,44 @@ def solve():
     for _ in range(t):
         N, D = map(int, input().split())
 
-        monsters = []
-        total_enemy_damage = 0
-        possible = True
+        canavarlar = []
+        toplam_hasar = 0
+        mumkun = True
 
         for _ in range(N):
             A, B, C = map(int, input().split())
-            if not possible:
+            if not mumkun:
                 continue
 
-            total_enemy_damage += B
-            turns = 0
+            toplam_hasar += B
+            tur = 0
 
             if A <= D:
-                turns = 1
+                tur = 1
             else:
                 if C >= D:
-                    possible = False
+                    mumkun = False
                     continue
 
-                remaining_hp = A - D
-                net_damage = D - C
-                turns = 1 + (remaining_hp + net_damage - 1) // net_damage
+                kalan_can = A - D
+                net_hasar = D - C
+                tur = 1 + (kalan_can + net_hasar - 1) // net_hasar
 
-            monsters.append((turns, B))
+            canavarlar.append((tur, B))
 
-        if not possible:
+        if not mumkun:
             print("-1")
         else:
-            monsters.sort(key=lambda x: x[0] / x[1])
+            canavarlar.sort(key=lambda x: x[0] / x[1])
 
-            total_damage_taken = 0
-            current_total_damage = total_enemy_damage
+            toplam_yedigimiz_hasar = 0
+            su_anki_toplam_hasar = toplam_hasar
 
-            for turns, damage in monsters:
-                others_damage = current_total_damage - damage
-                total_damage_taken += others_damage * turns
-                current_total_damage -= damage
+            for tur, hasar in canavarlar:
+                digerlerinin_hasari = su_anki_toplam_hasar - hasar
+                toplam_yedigimiz_hasar += digerlerinin_hasari * tur
+                su_anki_toplam_hasar -= hasar
 
-            print(total_damage_taken)
+            print(toplam_yedigimiz_hasar)
 
 solve()
