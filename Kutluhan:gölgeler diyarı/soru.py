@@ -18,7 +18,7 @@ def solve():
             # sadece okumuş olmak için okuduk, işlem yapmadan geçiyoruz.
             if not possible:
                 continue
-
+            
             total_enemy_damage += B
             
             # --- Hesaplama Kısmı ---
@@ -70,4 +70,3 @@ def solve():
 
 if __name__ == '__main__':
     solve()
-
