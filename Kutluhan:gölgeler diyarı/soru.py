@@ -1,5 +1,3 @@
-import sys
-
 def solve():
     # Test case sayısı (t)
     t = int(input())
@@ -72,3 +70,4 @@ def solve():
 
 if __name__ == '__main__':
     solve()
+
