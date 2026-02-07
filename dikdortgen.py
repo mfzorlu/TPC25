@@ -8,7 +8,7 @@ for i in range(n):
     locationsList.append(pairsList) # Add the locations to the list
 
 
-
+kosegenler = {}
 
 for i in range(n):
     for j in range(i + 1, n):
@@ -20,10 +20,18 @@ for i in range(n):
         ort_y = (nokta1[1] + nokta2[1])/2
         
         kos_uzn = (nokta1[0] - nokta2[0])**2 + (nokta1[1] - nokta2[1])**2
-    
+      
+        ozellik = (ort_x, ort_y,kos_uzn)
         
+        if ozellik in kosegenler:
+            kosegenler[ozellik] += 1
+        else:
+            kosegenler[ozellik] = 1
 
-
-    #    toplam_dikdortgen += (kosegen sayi * (kosegen sayi - 1)) // 2
+toplam_dikdortgen = 0
+for sayi in kosegenler.values():
+    if sayi >= 2:
+        
+        toplam_dikdortgen += (sayi * (sayi - 1)) // 2
 
 print(toplam_dikdortgen)
