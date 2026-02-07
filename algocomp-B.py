@@ -1,7 +1,7 @@
 n = int(input())
 r=n
 
-if n < 6:
+if n <= 6:
     print(-1)
     
 else:
